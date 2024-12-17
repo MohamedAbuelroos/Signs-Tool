@@ -1,6 +1,7 @@
 import DownloadIcon from "@mui/icons-material/Download";
 import HomeIcon from "@mui/icons-material/Home";
 import { useAuth } from "../authContext";
+// import logo from '../../public/Logo.jpg'; // Adjust the path
 
 const Header = () => {
   const currentDate = new Date();
@@ -17,18 +18,24 @@ const Header = () => {
   const { user } = useAuth();
 
   return (
-    <header className="bg-blue-600 text-white shadow-md p-4">
+    <header className="bg-blue-600 text-white shadow-md p-1">
       <div className="container mx-auto flex justify-around items-center">
-        <h1 className="text-2xl">
-          <span>{user ? `${user.role}` : "Signs Converter App"}</span>
-          <br />
-          {user && (
-            <>
-              <span className="">{formattedDate}, </span>
-              <span className="">{formattedTime}</span>
-            </>
-          )}
-        </h1>
+        <div className="flex items-center gap-3">
+          <div className="image-container w-[100px] ">
+            <img src={"/Logo.jpg"} className="rounded-lg opacity-55" alt="logo" />
+          </div>
+          <h1 className="text-2xl font-bold">
+            <span>{user ? `${user.role}` : "Signs Converter App"}</span>
+            <br />
+            {user && (
+              <>
+                <span className="">{formattedDate} </span>
+                <br />
+                <span className="">{formattedTime}</span>
+              </>
+            )}
+          </h1>
+        </div>
         <nav>
           <ul className="flex space-x-4">
             <li>
