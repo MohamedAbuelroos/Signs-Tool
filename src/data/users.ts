@@ -1,6 +1,6 @@
 // src/data/users.ts
 export const users = [
-  { name: "Mohamed", code: "12345", role: "Admin" },
-  { name: "Ramadan", code: "2532801", role: "User" },
-  { name: "Ahmed", code: "5678", role: "User" },
+  { name: "Mohamed", code: "MR22225621", role: "Admin" },
+  { name: "Ramadan", code: "R42445855", role: "User" },
+  { name: "Ahmed", code: "AR1885059", role: "User" },
 ];
